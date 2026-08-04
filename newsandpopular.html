@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - News & Popular</title>
+    <link rel="icon" href="src/images/iconpage/netflix.ico" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="src/css/common.css">
+</head>
+<body class="bg-black text-white m-0 p-0 overflow-x-hidden">
+    <header class="flex items-center justify-between px-3 md:px-12 py-2 md:py-3 bg-gradient-to-b from-black/90 to-transparent fixed top-0 w-full z-40">
+        <div class="flex items-center space-x-3 md:space-x-6">
+            <i class="fas fa-bars text-white cursor-pointer md:hidden text-base" onclick="toggleMobileMenu()"></i>
+            <img alt="Netflix Logo" class="h-5 md:h-9" src="src/images/iconpage/netflix_logo.png">
+            <nav class="hidden md:flex space-x-5 text-sm">
+                <a class="text-gray-300 hover:text-white transition" href="index.html">Home</a>
+                <a class="text-gray-300 hover:text-white transition" href="series.html">Series</a>
+                <a class="text-gray-300 hover:text-white transition" href="movies.html">Movies</a>
+                <a class="text-white hover:text-gray-300 transition" href="newsandpopular.html">News & Popular</a>
+                <a class="text-gray-300 hover:text-white transition" href="mylist.html">My List</a>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-3 md:space-x-5">
+            <div class="relative">
+                <i class="fas fa-search text-white cursor-pointer text-base" onclick="toggleSearchNotification()"></i>
+                <div class="notification" id="searchNotification" style="min-width: 240px;">
+                    <p>gada siapa siapa kecuali aku.me love you ~R</p>
+                </div>
+            </div>
+            <i class="fas fa-bell text-white cursor-pointer text-base" onclick="toggleNotification()"></i>
+            <div class="notification" id="notificationMenu" style="min-width: 240px;">
+                <p>Semakin Hari Semakin Cantik Sih Kamu</p>
+                <p>Aku Cemburu Kamu Post Foto Nanti Ada Yang Suka Kamu</p>
+                <p>I Love You Hehe &gt;3</p>
+            </div>
+            <div class="dropdown">
+                <img alt="User Avatar" class="h-5 w-5 md:h-7 md:w-7 rounded cursor-pointer" onclick="toggleDropdown()" src="src/images/iconpage/user_avatar.png">
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="#">Accounts</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="dropdown md:hidden fixed top-11 left-3 z-50">
+        <div class="dropdown-content mobile-menu-dropdown" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="series.html">Series</a>
+            <a href="newsandpopular.html">News & Popular</a>
+            <a href="mylist.html">My List</a>
+        </div>
+    </div>
+    
+    <main class="pt-20 md:pt-24 pb-12">
+        <section id="newsSection" class="bg-black py-6 scroll-animate">
+            <div class="container mx-auto px-4 md:px-12 max-w-4xl">
+                <h2 class="text-lg md:text-xl font-bold mb-6">News and Popular</h2>
+                
+                <div class="mb-8">
+                    <video class="w-full h-auto rounded" controls autoplay>
+                        <source src="src/videos/newsandpopularpage/news_video.mp4" type="video/mp4"/>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="text-sm md:text-base text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        Hari pertama masuk MA, aku melihatnya—Nurul. Gadis yang tidak terlalu mencolok, tapi entah kenapa, ada sesuatu dalam dirinya yang membuatku terus memperhatikannya. Aku tidak tahu kenapa, tapi sejak hari itu, aku mulai mengamatinya dari jauh, tanpa pernah benar-benar berani mendekat.
+                    </p>
+                    <p>
+                        Tahun pertama berlalu dengan cepat. Aku hanya bisa melihatnya tertawa bersama teman-temannya, mengerjakan tugas dengan serius, atau sesekali termenung di bangku sekolah. Aku ingin menyapanya, tapi entah kenapa, keberanian itu tidak pernah muncul.
+                    </p>
+                    <p>
+                        Tahun kedua, aku mulai lebih mengenalnya, meskipun masih dari kejauhan.Aku tahu, aku semakin jatuh hati. Tapi tetap saja, aku hanya diam.
+                    </p>
+                    <p>
+                        Tahun ketiga datang, dan aku sadar waktu kami di sekolah ini hampir habis. Aku mulai bertanya pada diri sendiri: Sampai kapan aku hanya akan menjadi penonton? Aku takut, jika aku tidak melakukan sesuatu sekarang, maka selamanya aku hanya akan menyesal.
+                    </p>
+                    <p>
+                        Hari itu, di masa liburan sekolah, aku akhirnya membuat sebuah website dan mengirimkan link tersebut menggunakan second account.
+                    </p>
+                    <p>
+                        "Hai, Nurul.
+                    </p>
+                    <p>
+                        Mungkin kamu tidak pernah menyadari kehadiranku, tapi aku selalu melihatmu. Aku mengagumimu sejak lama, menikmati setiap senyuman dan caramu menjalani hari. Aku tidak meminta jawaban atau balasan, aku hanya ingin kamu tahu bahwa ada seseorang yang selama ini diam-diam menyayangimu."
+                    </p>
+                    <p>
+                        Aku melihatnya dia membuka website itu. Aku tidak tahu apakah ia tahu itu dariku, tapi saat itu aku tersenyum. Setidaknya, sebelum masa sekolah ini berakhir, aku telah mengungkapkan perasaanku.
+                    </p>
+                    <p>
+                        Dan bagiku, itu sudah cukup.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.classList.contains("show")) {
+                dropdownMenu.classList.remove("show");
+            } else {
+                dropdownMenu.classList.add("show");
+            }
+        }
+
+        function toggleNotification() {
+            var notificationMenu = document.getElementById("notificationMenu");
+            if (notificationMenu.style.display === "block") {
+                notificationMenu.style.display = "none";
+            } else {
+                notificationMenu.style.display = "block";
+            }
+        }
+
+        function toggleSearchNotification() {
+            var searchNotification = document.getElementById("searchNotification");
+            if (searchNotification.style.display === "block") {
+                searchNotification.style.display = "none";
+            } else {
+                searchNotification.style.display = "block";
+            }
+        }
+
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            if (mobileMenu.classList.contains("show")) {
+                mobileMenu.classList.remove("show");
+            } else {
+                mobileMenu.classList.add("show");
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.cursor-pointer')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+                var notifications = document.getElementsByClassName("notification");
+                for (var i = 0; i < notifications.length; i++) {
+                    var openNotification = notifications[i];
+                    if (openNotification.style.display === "block") {
+                        openNotification.style.display = "none";
+                    }
+                }
+                var mobileMenus = document.getElementsByClassName("mobile-menu");
+                for (var i = 0; i < mobileMenus.length; i++) {
+                    var openMobileMenu = mobileMenus[i];
+                    if (openMobileMenu.classList.contains("show")) {
+                        openMobileMenu.classList.remove("show");
+                    }
+                }
+            }
+        }
+        
+        function handleScrollAnimation() {
+            const section = document.getElementById('newsSection');
+            const rect = section.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight * 0.85;
+            
+            if (isVisible) {
+                section.classList.add('visible');
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', handleScrollAnimation);
+            handleScrollAnimation();
+        });
+    </script>
+</body>
+</html>

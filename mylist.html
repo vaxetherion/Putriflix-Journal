@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - My List</title>
+    <link rel="icon" href="src/images/iconpage/netflix.ico" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="src/css/common.css">
+</head>
+<body class="bg-black text-white m-0 p-0 overflow-x-hidden">
+    <header class="flex items-center justify-between px-3 md:px-12 py-2 md:py-3 bg-gradient-to-b from-black/90 to-transparent fixed top-0 w-full z-40">
+        <div class="flex items-center space-x-3 md:space-x-6">
+            <i class="fas fa-bars text-white cursor-pointer md:hidden text-base" onclick="toggleMobileMenu()"></i>
+            <img alt="Netflix Logo" class="h-5 md:h-9" src="src/images/iconpage/netflix_logo.png">
+            <nav class="hidden md:flex space-x-5 text-sm">
+                <a class="text-gray-300 hover:text-white transition" href="index.html">Home</a>
+                <a class="text-gray-300 hover:text-white transition" href="series.html">Series</a>
+                <a class="text-gray-300 hover:text-white transition" href="movies.html">Movies</a>
+                <a class="text-gray-300 hover:text-white transition" href="newsandpopular.html">News & Popular</a>
+                <a class="text-white hover:text-gray-300 transition" href="mylist.html">My List</a>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-3 md:space-x-5">
+            <div class="relative">
+                <i class="fas fa-search text-white cursor-pointer text-base" onclick="toggleSearchNotification()"></i>
+                <div class="notification" id="searchNotification" style="min-width: 240px;">
+                    <p>mau ngapain? liat notifikasi? gada cuma ada Aku ~R</p>
+                </div>
+            </div>
+            <i class="fas fa-bell text-white cursor-pointer text-base" onclick="toggleNotification()"></i>
+            <div class="notification" id="notificationMenu" style="min-width: 240px;">
+                <p>Semakin Hari Semakin Cantik Sih Kamu</p>
+                <p>Aku Cemburu Kamu Post Foto Nanti Ada Yang Suka Kamu</p>
+                <p>I Love You Hehe &gt;3</p>
+            </div>
+            <div class="dropdown">
+                <img alt="User Avatar" class="h-5 w-5 md:h-7 md:w-7 rounded cursor-pointer" onclick="toggleDropdown()" src="src/images/iconpage/user_avatar.png">
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="#">Accounts</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="dropdown md:hidden fixed top-11 left-3 z-50">
+        <div class="dropdown-content mobile-menu-dropdown" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="series.html">Series</a>
+            <a href="movies.html">Movies</a>
+            <a href="newsandpopular.html">News & Popular</a>
+            <a href="mylist.html">My List</a>
+        </div>
+    </div>
+    
+    <main class="pt-20 md:pt-24 pb-12">
+        <section class="bg-black py-6">
+            <div class="container mx-auto px-4 md:px-12 max-w-4xl">
+                <h2 class="text-lg md:text-xl font-bold mb-6">List Account</h2>
+                
+                <div class="mb-10">
+                    <h3 class="text-md font-semibold mb-4 text-gray-300">Developer</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3 bg-gray-800 p-3 rounded">
+                            <img alt="Instagram Icon" class="h-6 w-6" src="src/images/iconpage/instagram_icon.png"/>
+                            <a class="text-white hover:text-blue-400 transition" href="https://www.instagram.com/roufdarkside" target="_blank">
+                                @roufdarkside
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-gray-800 p-3 rounded">
+                            <img alt="Instagram Icon" class="h-6 w-6" src="src/images/iconpage/instagram_icon.png"/>
+                            <a class="text-white hover:text-blue-400 transition" href="https://www.instagram.com/roufserenity" target="_blank">
+                                @roufserenity
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-gray-800 p-3 rounded">
+                            <img alt="Instagram Icon" class="h-6 w-6" src="src/images/iconpage/instagram_icon.png"/>
+                            <a class="text-white hover:text-blue-400 transition" href="https://www.instagram.com/evxga_" target="_blank">
+                                @evxga_
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-md font-semibold mb-4 text-gray-300">My Queen</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3 bg-gray-800 p-3 rounded">
+                            <img alt="Instagram Icon" class="h-6 w-6" src="src/images/iconpage/instagram_icon.png"/>
+                            <a class="text-white hover:text-blue-400 transition" href="https://www.instagram.com/helminana177" target="_blank">
+                                @helminana177
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-3 bg-gray-800 p-3 rounded">
+                            <img alt="Instagram Icon" class="h-6 w-6" src="src/images/iconpage/instagram_icon.png"/>
+                            <a class="text-white hover:text-blue-400 transition" href="https://www.instagram.com/irullkiyowok" target="_blank">
+                                @irullkiyowok
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.classList.contains("show")) {
+                dropdownMenu.classList.remove("show");
+            } else {
+                dropdownMenu.classList.add("show");
+            }
+        }
+
+        function toggleNotification() {
+            var notificationMenu = document.getElementById("notificationMenu");
+            if (notificationMenu.style.display === "block") {
+                notificationMenu.style.display = "none";
+            } else {
+                notificationMenu.style.display = "block";
+            }
+        }
+
+        function toggleSearchNotification() {
+            var searchNotification = document.getElementById("searchNotification");
+            if (searchNotification.style.display === "block") {
+                searchNotification.style.display = "none";
+            } else {
+                searchNotification.style.display = "block";
+            }
+        }
+
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            if (mobileMenu.classList.contains("show")) {
+                mobileMenu.classList.remove("show");
+            } else {
+                mobileMenu.classList.add("show");
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.cursor-pointer')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+                var notifications = document.getElementsByClassName("notification");
+                for (var i = 0; i < notifications.length; i++) {
+                    var openNotification = notifications[i];
+                    if (openNotification.style.display === "block") {
+                        openNotification.style.display = "none";
+                    }
+                }
+                var mobileMenus = document.getElementsByClassName("mobile-menu");
+                for (var i = 0; i < mobileMenus.length; i++) {
+                    var openMobileMenu = mobileMenus[i];
+                    if (openMobileMenu.classList.contains("show")) {
+                        openMobileMenu.classList.remove("show");
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

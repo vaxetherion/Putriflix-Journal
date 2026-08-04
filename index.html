@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href="src/images/iconpage/netflix.ico" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="src/css/common.css">
+    <link rel="stylesheet" href="src/css/index.css">
+</head>
+<body class="bg-black text-white m-0 p-0 overflow-x-hidden">
+    <header class="flex items-center justify-between px-3 md:px-12 py-2 md:py-3 bg-gradient-to-b from-black/90 to-transparent fixed top-0 w-full z-40">
+        <div class="flex items-center space-x-3 md:space-x-6">
+            <i class="fas fa-bars text-white cursor-pointer md:hidden text-base" onclick="toggleMobileMenu()"></i>
+            <img alt="Netflix Logo" class="h-5 md:h-9" src="src/images/iconpage/netflix_logo.png">
+            <nav class="hidden md:flex space-x-5 text-sm">
+                <a class="text-white hover:text-gray-300 transition" href="index.html">Home</a>
+                <a class="text-gray-300 hover:text-white transition" href="series.html">Series</a>
+                <a class="text-gray-300 hover:text-white transition" href="movies.html">Movies</a>
+                <a class="text-gray-300 hover:text-white transition" href="newsandpopular.html">News & Popular</a>
+                <a class="text-gray-300 hover:text-white transition" href="mylist.html">My List</a>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-3 md:space-x-5">
+            <div class="relative">
+                <i class="fas fa-search text-white cursor-pointer text-base" onclick="toggleSearchNotification()"></i>
+                <div class="notification" id="searchNotification" style="min-width: 240px;">
+                    <p>gada siapa siapa kecuali aku.me love you ~R</p>
+                </div>
+            </div>
+            <i class="fas fa-bell text-white cursor-pointer text-base" onclick="toggleNotification()"></i>
+            <div class="notification" id="notificationMenu" style="min-width: 240px;">
+                <p>Semakin Hari Semakin Cantik Sih Kamu</p>
+                <p>Aku Cemburu Kamu Post Foto Nanti Ada Yang Suka Kamu</p>
+                <p>I Love You Hehe &gt;3</p>
+            </div>
+            <div class="dropdown">
+                <img alt="User Avatar" class="h-5 w-5 md:h-7 md:w-7 rounded cursor-pointer" onclick="toggleDropdown()" src="src/images/iconpage/user_avatar.png">
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="#">Accounts</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="dropdown md:hidden fixed top-11 left-3 z-50">
+        <div class="dropdown-content mobile-menu-dropdown" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="series.html">Series</a>
+            <a href="newsandpopular.html">News & Popular</a>
+            <a href="mylist.html">My List</a>
+        </div>
+    </div>
+    
+    <main class="relative">
+        <picture>
+            <source media="(max-width: 768px)" srcset="src/images/homepage/backgroundmobile_image.png">
+            <img alt="Background Image" class="w-full h-screen object-cover" src="src/images/homepage/background_image.png">
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-start px-4 md:px-12">
+            <div class="max-w-xl">
+                <h1 class="text-xl md:text-4xl font-bold mb-3 md:mb-4">Bagaimana Caranya Memilikimu Secara Sempurna? Aku Sudah Capek Menjadi Pengagummu.</h1>
+                <p class="text-xs md:text-base mb-6 md:mb-8 max-w-lg">Beginilah Cara Rouf, Seseorang Yang Mungkin Tak Pernah Kamu Sadari, Mengungkapkan Kekagumannya Dari kejauhan, Aku Telah Melihat Cahayamu Bersinar, Berharap Suatu Hari Nanti Kamu Akan Menyadarinya. Tapi untuk saat ini, Beginilah Cara Rouf Mengungkapkan Perasaan Yang Sebenarnya. I Love You &gt;3</p>
+                <div class="flex space-x-3">
+                    <button class="bg-white text-black px-6 py-2 rounded flex items-center font-semibold text-sm md:text-base hover:bg-white/80 transition cursor-pointer" onclick="openModal()">
+                        <i class="fas fa-play mr-2"></i> Play
+                    </button>
+                    <button class="bg-gray-500/70 text-white px-6 py-2 rounded flex items-center font-semibold text-sm md:text-base hover:bg-gray-500/50 transition cursor-pointer" onclick="openInfoModal()">
+                        <i class="fas fa-info-circle mr-2"></i> More Info
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-40 md:h-48 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+    </main>
+    
+    <section class="bg-black py-6 md:py-8 scroll-animate" id="imageSection">
+        <div class="container mx-auto px-4 md:px-12">
+            <h2 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Angel Face</h2>
+            <div id="imageGrid" class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3">
+            </div>
+        </div>
+    </section>
+    
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe src="play.html" width="100%" height="400px" style="border: none; border-radius: 8px;"></iframe>
+        </div>
+    </div>
+    
+    <div class="modal" id="infoModal">
+        <div class="modal-content info-modal-content">
+            <span class="close" onclick="closeInfoModal()">&times;</span>
+            <h2>Tentang Dia</h2>
+            <p>Dia adalah sosok yang penuh keajaiban, seorang wanita yang mampu mengubah hari-hariku menjadi berwarna hanya dengan satu senyum. Setiap detail tentangnya adalah keindahan yang tak tergantikan.</p>
+            <p>Kecantikannya bukan hanya dari luar, tetapi juga dari dalam hatinya yang lembut dan penuh kasih. Dia memiliki aura yang membuat setiap orang di sekitarnya merasa nyaman dan istimewa.</p>
+            <p>Matanya memancarkan cahaya kebijaksanaan, senyumnya menenangkan jiwa, dan kehadirannya selalu menjadi alasan untukku bersyukur setiap hari. Dia adalah definisi sempurna dari sebuah keindahan yang sesungguhan.</p>
+            <p>I Love You More Than Words Can Say ❤️</p>
+        </div>
+    </div>
+    
+    <script>
+        const allImages = [
+            "placeholder1.png", "placeholder2.png", "placeholder3.png", "placeholder4.png", 
+            "placeholder5.png", "placeholder6.png", "placeholder7.png", "placeholder8.png", 
+            "placeholder9.png", "placeholder10.png", "placeholder11.png", "placeholder12.png", 
+            "placeholder13.png", "placeholder14.png", "placeholder15.png", "placeholder16.png", 
+            "placeholder17.png", "placeholder18.png", "placeholder19.png", 
+            "placeholder20.png", "placeholder21.png", "placeholder22.png", "placeholder23.png", 
+            "placeholder24.png", "placeholder25.png", "placeholder26.png", "placeholder27.png", 
+            "placeholder28.png", "placeholder29.png", "placeholder30.png", "placeholder31.png", 
+            "placeholder32.png", "placeholder33.png", "placeholder34.png", "placeholder35.png", 
+            "placeholder36.png", "placeholder37.png", "placeholder38.png", "placeholder39.png", 
+            "placeholder40.png", "placeholder41.png", "placeholder42.png", "placeholder43.png", 
+            "placeholder44.png", "placeholder45.png", "placeholder46.png", "placeholder47.png", 
+            "placeholder48.png", "placeholder49.png", "placeholder50.png", "placeholder51.png", 
+            "placeholder52.png", "placeholder53.png", "placeholder54.png", "placeholder55.png"
+        ];
+
+        let remainingImages = [...allImages];
+        let gridContainers = [];
+
+        function shuffleArray(array) {
+            const newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        }
+
+        function getNextImages(count) {
+            if (remainingImages.length < count) {
+                remainingImages = [...allImages];
+            }
+            const shuffled = shuffleArray(remainingImages);
+            const selected = shuffled.slice(0, count);
+            remainingImages = shuffled.slice(count);
+            return selected;
+        }
+
+        function initializeGrid() {
+            const grid = document.getElementById('imageGrid');
+            const initialImages = getNextImages(12);
+            
+            grid.innerHTML = initialImages.map((img, index) => `
+                <div class="image-container aspect-[2/3] rounded overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
+                    <img alt="Image" class="active" src="src/images/seriespage/${img}">
+                    <img alt="Image" class="inactive">
+                </div>
+            `).join('');
+            
+            gridContainers = Array.from(grid.querySelectorAll('.image-container'));
+        }
+
+        function updateImages() {
+            const newImages = getNextImages(12);
+            
+            gridContainers.forEach((container, index) => {
+                const images = container.querySelectorAll('img');
+                const activeImg = images[0].classList.contains('active') ? images[0] : images[1];
+                const inactiveImg = images[0].classList.contains('active') ? images[1] : images[0];
+                
+                inactiveImg.src = `src/images/seriespage/${newImages[index]}`;
+                
+                activeImg.classList.remove('active');
+                activeImg.classList.add('inactive');
+                inactiveImg.classList.remove('inactive');
+                inactiveImg.classList.add('active');
+            });
+        }
+
+        function handleScrollAnimation() {
+            const section = document.getElementById('imageSection');
+            const rect = section.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight * 0.85;
+            
+            if (isVisible) {
+                section.classList.add('visible');
+            }
+        }
+
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        function openInfoModal() {
+            document.getElementById("infoModal").style.display = "block";
+        }
+
+        function closeInfoModal() {
+            document.getElementById("infoModal").style.display = "none";
+        }
+
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.classList.contains("show")) {
+                dropdownMenu.classList.remove("show");
+            } else {
+                dropdownMenu.classList.add("show");
+            }
+        }
+
+        function toggleNotification() {
+            var notificationMenu = document.getElementById("notificationMenu");
+            if (notificationMenu.style.display === "block") {
+                notificationMenu.style.display = "none";
+            } else {
+                notificationMenu.style.display = "block";
+            }
+        }
+
+        function toggleSearchNotification() {
+            var searchNotification = document.getElementById("searchNotification");
+            if (searchNotification.style.display === "block") {
+                searchNotification.style.display = "none";
+            } else {
+                searchNotification.style.display = "block";
+            }
+        }
+
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            if (mobileMenu.classList.contains("show")) {
+                mobileMenu.classList.remove("show");
+            } else {
+                mobileMenu.classList.add("show");
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.cursor-pointer')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+                var notifications = document.getElementsByClassName("notification");
+                for (var i = 0; i < notifications.length; i++) {
+                    var openNotification = notifications[i];
+                    if (openNotification.style.display === "block") {
+                        openNotification.style.display = "none";
+                    }
+                }
+                var mobileMenus = document.getElementsByClassName("mobile-menu");
+                for (var i = 0; i < mobileMenus.length; i++) {
+                    var openMobileMenu = mobileMenus[i];
+                    if (openMobileMenu.classList.contains("show")) {
+                        openMobileMenu.classList.remove("show");
+                    }
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeGrid();
+            setInterval(updateImages, 5000);
+            window.addEventListener('scroll', handleScrollAnimation);
+            handleScrollAnimation();
+        });
+    </script>
+</body>
+</html>

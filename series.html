@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Series</title>
+    <link rel="icon" href="src/images/iconpage/netflix.ico" type="image/x-icon"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="src/css/common.css">
+</head>
+<body class="bg-black text-white m-0 p-0 overflow-x-hidden">
+    <header class="flex items-center justify-between px-3 md:px-12 py-2 md:py-3 bg-gradient-to-b from-black/90 to-transparent fixed top-0 w-full z-40">
+        <div class="flex items-center space-x-3 md:space-x-6">
+            <i class="fas fa-bars text-white cursor-pointer md:hidden text-base" onclick="toggleMobileMenu()"></i>
+            <img alt="Netflix Logo" class="h-5 md:h-9" src="src/images/iconpage/netflix_logo.png">
+            <nav class="hidden md:flex space-x-5 text-sm">
+                <a class="text-gray-300 hover:text-white transition" href="index.html">Home</a>
+                <a class="text-white hover:text-gray-300 transition" href="series.html">Series</a>
+                <a class="text-gray-300 hover:text-white transition" href="movies.html">Movies</a>
+                <a class="text-gray-300 hover:text-white transition" href="newsandpopular.html">News & Popular</a>
+                <a class="text-gray-300 hover:text-white transition" href="mylist.html">My List</a>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-3 md:space-x-5">
+            <div class="relative">
+                <i class="fas fa-search text-white cursor-pointer text-base" onclick="toggleSearchNotification()"></i>
+                <div class="notification" id="searchNotification" style="min-width: 240px;">
+                    <p>gada siapa siapa kecuali aku.me love you ~R</p>
+                </div>
+            </div>
+            <i class="fas fa-bell text-white cursor-pointer text-base" onclick="toggleNotification()"></i>
+            <div class="notification" id="notificationMenu" style="min-width: 240px;">
+                <p>Semakin Hari Semakin Cantik Sih Kamu</p>
+                <p>Aku Cemburu Kamu Post Foto Nanti Ada Yang Suka Kamu</p>
+                <p>I Love You Hehe &gt;3</p>
+            </div>
+            <div class="dropdown">
+                <img alt="User Avatar" class="h-5 w-5 md:h-7 md:w-7 rounded cursor-pointer" onclick="toggleDropdown()" src="src/images/iconpage/user_avatar.png">
+                <div class="dropdown-content" id="dropdownMenu">
+                    <a href="#">Accounts</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="dropdown md:hidden fixed top-11 left-3 z-50">
+        <div class="dropdown-content mobile-menu-dropdown" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="series.html">Series</a>
+            <a href="newsandpopular.html">News & Popular</a>
+            <a href="mylist.html">My List</a>
+        </div>
+    </div>
+    
+    <main class="pt-20 md:pt-24 pb-12">
+        <section id="seriesSection" class="bg-black py-6 scroll-animate">
+            <div class="container mx-auto px-4 md:px-12">
+                <h2 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Divine Beauty</h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3 mb-4">
+                    <div class="text-center">
+                        <img alt="Image 1" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder1.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 2" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder2.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 3" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder3.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 4" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder4.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 5" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder5.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 6" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder6.png"/>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <img alt="Image 16:9 1" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder16_9.png"/>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3 mb-4">
+                    <div class="text-center">
+                        <img alt="Image 7" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder7.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 8" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder8.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 9" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder9.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 10" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder10.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 11" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder11.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 12" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder12.png"/>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <img alt="Image 16:9 2" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder16_9pt2.png"/>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3 mb-4">
+                    <div class="text-center">
+                        <img alt="Image 13" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder13.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 14" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder14.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 15" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder15.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 16" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder16.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 17" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder17.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 18" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder18.png"/>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <img alt="Image 16:9 3" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder16_9pt3.png"/>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3 mb-4">
+                    <div class="text-center">
+                        <img alt="Image 19" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder19.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 20" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder20.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 21" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder21.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 22" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder22.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 23" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder23.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 24" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder24.png"/>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <img alt="Image 16:9 4" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder16_9pt4.png"/>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3 mb-4">
+                    <div class="text-center">
+                        <img alt="Image 25" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder25.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 26" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder26.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 27" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder27.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 28" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder28.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 29" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder29.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 30" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder30.png"/>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <img alt="Image 16:9 5" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder16_9pt5.png"/>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3 mb-4">
+                    <div class="text-center">
+                        <img alt="Image 31" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder31.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 32" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder32.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 33" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder33.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 34" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder34.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 35" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder35.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 36" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder36.png"/>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <img alt="Image 16:9 6" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder16_9pt6.png"/>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3 mb-4">
+                    <div class="text-center">
+                        <img alt="Image 37" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder37.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 38" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder38.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 39" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder39.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 40" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder40.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 41" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder41.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 42" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder42.png"/>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <img alt="Image 16:9 7" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder16_9pt7.png"/>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3">
+                    <div class="text-center">
+                        <img alt="Image 43" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder43.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 44" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder44.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 45" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder45.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 46" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder46.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 47" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder47.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 48" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder48.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 49" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder49.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 50" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder50.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 51" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder51.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 52" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder52.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 53" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder53.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 54" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder54.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 55" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder55.png"/>
+                    </div>
+                    <div> class="text-center">
+                        <img alt="Image 56" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder56.png"/>
+                    </div>
+                    <div class="text-center">
+                        <img alt="Image 57" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/seriespage/placeholder57.png"/> 
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById("dropdownMenu");
+            if (dropdownMenu.classList.contains("show")) {
+                dropdownMenu.classList.remove("show");
+            } else {
+                dropdownMenu.classList.add("show");
+            }
+        }
+
+        function toggleNotification() {
+            var notificationMenu = document.getElementById("notificationMenu");
+            if (notificationMenu.style.display === "block") {
+                notificationMenu.style.display = "none";
+            } else {
+                notificationMenu.style.display = "block";
+            }
+        }
+
+        function toggleSearchNotification() {
+            var searchNotification = document.getElementById("searchNotification");
+            if (searchNotification.style.display === "block") {
+                searchNotification.style.display = "none";
+            } else {
+                searchNotification.style.display = "block";
+            }
+        }
+
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById("mobileMenu");
+            if (mobileMenu.classList.contains("show")) {
+                mobileMenu.classList.remove("show");
+            } else {
+                mobileMenu.classList.add("show");
+            }
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.cursor-pointer')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+                var notifications = document.getElementsByClassName("notification");
+                for (var i = 0; i < notifications.length; i++) {
+                    var openNotification = notifications[i];
+                    if (openNotification.style.display === "block") {
+                        openNotification.style.display = "none";
+                    }
+                }
+                var mobileMenus = document.getElementsByClassName("mobile-menu");
+                for (var i = 0; i < mobileMenus.length; i++) {
+                    var openMobileMenu = mobileMenus[i];
+                    if (openMobileMenu.classList.contains("show")) {
+                        openMobileMenu.classList.remove("show");
+                    }
+                }
+            }
+        }
+        
+        function handleScrollAnimation() {
+            const section = document.getElementById('seriesSection');
+            const rect = section.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight * 0.85;
+            
+            if (isVisible) {
+                section.classList.add('visible');
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', handleScrollAnimation);
+            handleScrollAnimation();
+        });
+    </script>
+</body>
+</html>
