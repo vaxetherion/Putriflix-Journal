@@ -59,7 +59,7 @@
     <main class="relative">
         <picture>
             <source media="(max-width: 768px)" srcset="src/images/homepage/placeholder2.jpg">
-            <img alt="Background Image" class="w-full h-screen object-cover" src="src/images/homepage/placeholder32.jpg">
+            <img alt="Background Image" class="w-full h-screen object-cover" src="src/images/homepage/placeholder22.png">
         </picture>
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
         <div class="absolute inset-0 flex flex-col justify-center items-start px-4 md:px-12">
@@ -106,11 +106,18 @@
     </div>
     
     <script>
-        const allImages = Array.from({ length: 46 }, (_, index) => {
-            const imageNumber = index + 1;
-            const extension = imageNumber === 42 ? 'png' : 'jpg';
-            return `placeholder${imageNumber}.${extension}`;
-        });
+        const allImages = [
+            "placeholder1.png", "placeholder2.png", "placeholder3.png", "placeholder4.png", 
+            "placeholder5.png", "placeholder6.png", "placeholder7.png", "placeholder8.png", 
+            "placeholder9.png", "placeholder10.png", "placeholder11.png", "placeholder12.png", 
+            "placeholder13.png", "placeholder14.png", "placeholder15.png", "placeholder16.png", 
+            "placeholder17.png", "placeholder18.png", "placeholder19.png", 
+            "placeholder20.png", "placeholder21.png", "placeholder22.png", "placeholder23.png", 
+            "placeholder24.png", "placeholder25.png", "placeholder26.png", "placeholder27.png", 
+            "placeholder28.png", "placeholder29.png", "placeholder30.png", "placeholder31.png", 
+            "placeholder32.png", "placeholder33.png", "placeholder34.png", "placeholder35.png", 
+            "placeholder36.png"
+        ];
 
         let remainingImages = [...allImages];
         let gridContainers = [];
@@ -136,7 +143,7 @@
 
         function initializeGrid() {
             const grid = document.getElementById('imageGrid');
-            const initialImages = getNextImages(Math.min(12, allImages.length));
+            const initialImages = getNextImages(12);
             
             grid.innerHTML = initialImages.map((img, index) => `
                 <div class="image-container aspect-[2/3] rounded overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
@@ -149,7 +156,7 @@
         }
 
         function updateImages() {
-            const newImages = getNextImages(gridContainers.length);
+            const newImages = getNextImages(12);
             
             gridContainers.forEach((container, index) => {
                 const images = container.querySelectorAll('img');
