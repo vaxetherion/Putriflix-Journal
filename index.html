@@ -50,6 +50,7 @@
         <div class="dropdown-content mobile-menu-dropdown" id="mobileMenu">
             <a href="index.html">Home</a>
             <a href="series.html">Series</a>
+            <a href="movies.html">Movies</a>
             <a href="newsandpopular.html">News & Popular</a>
             <a href="mylist.html">My List</a>
         </div>
@@ -57,8 +58,8 @@
     
     <main class="relative">
         <picture>
-            <source media="(max-width: 768px)" srcset="src/images/homepage/backgroundmobile_image.png">
-            <img alt="Background Image" class="w-full h-screen object-cover" src="src/images/homepage/background_image.png">
+            <source media="(max-width: 768px)" srcset="src/images/homepage/placeholder2.jpg">
+            <img alt="Background Image" class="w-full h-screen object-cover" src="src/images/homepage/placeholder32.jpg">
         </picture>
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
         <div class="absolute inset-0 flex flex-col justify-center items-start px-4 md:px-12">
@@ -105,22 +106,11 @@
     </div>
     
     <script>
-        const allImages = [
-            "placeholder1.png", "placeholder2.png", "placeholder3.png", "placeholder4.png", 
-            "placeholder5.png", "placeholder6.png", "placeholder7.png", "placeholder8.png", 
-            "placeholder9.png", "placeholder10.png", "placeholder11.png", "placeholder12.png", 
-            "placeholder13.png", "placeholder14.png", "placeholder15.png", "placeholder16.png", 
-            "placeholder17.png", "placeholder18.png", "placeholder19.png", 
-            "placeholder20.png", "placeholder21.png", "placeholder22.png", "placeholder23.png", 
-            "placeholder24.png", "placeholder25.png", "placeholder26.png", "placeholder27.png", 
-            "placeholder28.png", "placeholder29.png", "placeholder30.png", "placeholder31.png", 
-            "placeholder32.png", "placeholder33.png", "placeholder34.png", "placeholder35.png", 
-            "placeholder36.png", "placeholder37.png", "placeholder38.png", "placeholder39.png", 
-            "placeholder40.png", "placeholder41.png", "placeholder42.png", "placeholder43.png", 
-            "placeholder44.png", "placeholder45.png", "placeholder46.png", "placeholder47.png", 
-            "placeholder48.png", "placeholder49.png", "placeholder50.png", "placeholder51.png", 
-            "placeholder52.png", "placeholder53.png", "placeholder54.png", "placeholder55.png"
-        ];
+        const allImages = Array.from({ length: 46 }, (_, index) => {
+            const imageNumber = index + 1;
+            const extension = imageNumber === 42 ? 'png' : 'jpg';
+            return `placeholder${imageNumber}.${extension}`;
+        });
 
         let remainingImages = [...allImages];
         let gridContainers = [];
@@ -146,7 +136,7 @@
 
         function initializeGrid() {
             const grid = document.getElementById('imageGrid');
-            const initialImages = getNextImages(12);
+            const initialImages = getNextImages(Math.min(12, allImages.length));
             
             grid.innerHTML = initialImages.map((img, index) => `
                 <div class="image-container aspect-[2/3] rounded overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300">
@@ -159,7 +149,7 @@
         }
 
         function updateImages() {
-            const newImages = getNextImages(12);
+            const newImages = getNextImages(gridContainers.length);
             
             gridContainers.forEach((container, index) => {
                 const images = container.querySelectorAll('img');

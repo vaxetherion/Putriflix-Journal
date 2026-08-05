@@ -98,6 +98,7 @@
         <div class="dropdown-content mobile-menu-dropdown" id="mobileMenu">
             <a href="index.html">Home</a>
             <a href="series.html">Series</a>
+            <a href="movies.html">Movies</a>
             <a href="newsandpopular.html">News & Popular</a>
             <a href="mylist.html">My List</a>
         </div>
@@ -107,314 +108,45 @@
         <section id="moviesSection" class="bg-black py-6 scroll-animate">
             <div class="container mx-auto px-4 md:px-12">
                 <h2 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Movies</h2>
-                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3">
-                    <div class="text-center">
-                        <img alt="Thumbnail 1" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder1.png" onclick="openModal('video1')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 2" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder2.png" onclick="openModal('video2')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 3" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder3.png" onclick="openModal('video3')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 4" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder4.png" onclick="openModal('video4')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 5" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder5.png" onclick="openModal('video5')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 6" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder6.png" onclick="openModal('video6')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 7" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder7.png" onclick="openModal('video7')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 8" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder8.png" onclick="openModal('video8')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 9" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder9.png" onclick="openModal('video9')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 10" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder10.png" onclick="openModal('video10')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 11" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder11.png" onclick="openModal('video11')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 12" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder12.png" onclick="openModal('video12')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 13" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder13.png" onclick="openModal('video13')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 14" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder14.png" onclick="openModal('video14')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 15" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder15.png" onclick="openModal('video15')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 16" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder16.png" onclick="openModal('video16')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 17" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder17.png" onclick="openModal('video17')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 18" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder18.png" onclick="openModal('video18')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 19" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder19.png" onclick="openModal('video19')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 20" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder20.png" onclick="openModal('video20')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 21" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder21.png" onclick="openModal('video21')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 22" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder22.png" onclick="openModal('video22')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 23" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder23.png" onclick="openModal('video23')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 24" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder24.png" onclick="openModal('video24')"/>
-                    </div>
-                    <div class="text-center">
-                        <img alt="Thumbnail 25" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder25.png" onclick="openModal('video25')"/>
-                    </div>
-                </div>
+                <div id="moviesGrid" class="grid grid-cols-2 md:grid-cols-6 gap-2 md:gap-3"></div>
             </div>
         </section>
     </main>
     
-    <div class="modal" id="video1">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video1')">&times;</span>
-            <video id="video1-player" controls onended="closeModal('video1')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video1.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video2">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video2')">&times;</span>
-            <video id="video2-player" controls onended="closeModal('video2')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video2.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video3">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video3')">&times;</span>
-            <video id="video3-player" controls onended="closeModal('video3')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video3.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video4">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video4')">&times;</span>
-            <video id="video4-player" controls onended="closeModal('video4')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video4.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video5">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video5')">&times;</span>
-            <video id="video5-player" controls onended="closeModal('video5')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video5.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video6">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video6')">&times;</span>
-            <video id="video6-player" controls onended="closeModal('video6')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video6.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video7">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video7')">&times;</span>
-            <video id="video7-player" controls onended="closeModal('video7')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video7.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video8">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video8')">&times;</span>
-            <video id="video8-player" controls onended="closeModal('video8')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video8.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video9">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video9')">&times;</span>
-            <video id="video9-player" controls onended="closeModal('video9')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video9.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video10">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video10')">&times;</span>
-            <video id="video10-player" controls onended="closeModal('video10')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video10.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video11">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video11')">&times;</span>
-            <video id="video11-player" controls onended="closeModal('video11')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video11.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video12">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video12')">&times;</span>
-            <video id="video12-player" controls onended="closeModal('video12')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video12.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video13">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video13')">&times;</span>
-            <video id="video13-player" controls onended="closeModal('video13')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video13.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video14">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video14')">&times;</span>
-            <video id="video14-player" controls onended="closeModal('video14')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video14.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video15">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video15')">&times;</span>
-            <video id="video15-player" controls onended="closeModal('video15')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video15.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video16">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video16')">&times;</span>
-            <video id="video16-player" controls onended="closeModal('video16')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video16.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video17">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video17')">&times;</span>
-            <video id="video17-player" controls onended="closeModal('video17')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video17.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video18">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video18')">&times;</span>
-            <video id="video18-player" controls onended="closeModal('video18')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video18.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video19">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video19')">&times;</span>
-            <video id="video19-player" controls onended="closeModal('video19')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video19.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video20">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video20')">&times;</span>
-            <video id="video20-player" controls onended="closeModal('video20')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video20.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video21">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video21')">&times;</span>
-            <video id="video21-player" controls onended="closeModal('video21')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video21.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video22">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video22')">&times;</span>
-            <video id="video22-player" controls onended="closeModal('video22')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video22.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video23">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video23')">&times;</span>
-            <video id="video23-player" controls onended="closeModal('video23')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video23.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video24">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video24')">&times;</span>
-            <video id="video24-player" controls onended="closeModal('video24')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video24.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-    <div class="modal" id="video25">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('video25')">&times;</span>
-            <video id="video25-player" controls onended="closeModal('video25')" style="width: 100%; border-radius: 8px;">
-                <source src="src/videos/moviespage/video25.mp4" type="video/mp4"/>
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
+    <div id="movieModals"></div>
     
     <script>
+        const movieCount = 7;
+
+        function renderMovies() {
+            const grid = document.getElementById('moviesGrid');
+            const modals = document.getElementById('movieModals');
+
+            grid.innerHTML = Array.from({ length: movieCount }, (_, index) => {
+                const itemNumber = index + 1;
+                return `
+                    <div class="text-center">
+                        <img alt="Thumbnail ${itemNumber}" class="w-full h-auto rounded hover:scale-105 transition-transform duration-300 cursor-pointer" src="src/images/moviespage/placeholder${itemNumber}.png" onclick="openModal('video${itemNumber}')"/>
+                    </div>
+                `;
+            }).join('');
+
+            modals.innerHTML = Array.from({ length: movieCount }, (_, index) => {
+                const itemNumber = index + 1;
+                return `
+                    <div class="modal" id="video${itemNumber}">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('video${itemNumber}')">&times;</span>
+                            <video id="video${itemNumber}-player" controls onended="closeModal('video${itemNumber}')" style="width: 100%; border-radius: 8px;">
+                                <source src="src/videos/moviespage/video${itemNumber}.mp4" type="video/mp4"/>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
         function openModal(videoId) {
             document.getElementById(videoId).style.display = "block";
             var video = document.getElementById(videoId + "-player");
@@ -502,6 +234,7 @@
         }
         
         document.addEventListener('DOMContentLoaded', function() {
+            renderMovies();
             window.addEventListener('scroll', handleScrollAnimation);
             handleScrollAnimation();
         });
