@@ -60,3 +60,4 @@ Discord: @evxga_# putriflix-journal
 # putriflix-journal
 # putriflix-journal
 # Putriflix-Journal
+# Putriflix-Journal
