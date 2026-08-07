@@ -31,6 +31,18 @@
 
 ---
 
+Repository ini bersifat SANGAT PRIBADI (PRIVATE).
+
+DILARANG KERAS melakukan fork, clone, penggandaan, distribusi ulang, atau mempublikasikan ulang kode sumber maupun aset media di dalam repository ini tanpa izin tertulis dari pemilik sah.
+
+Jika Anda bermaksud untuk mempelajari struktur kode atau meminta izin akses, silakan hubungi pemilik resmi terlebih dahulu.
+
+📩 Kontak Perizinan:
+Telegram: @evxga_
+Discord: @evxga_
+
+---
+
 ## 🛠️ Tech Stack
 
 - **Frontend Framework:** React.js / HTML5
@@ -46,21 +58,3 @@
   RESTRICTED PRIVATE REPOSITORY - PROPRIETARY CODE
   Copyright (C) 2026 Evaga. All Rights Reserved.
 =============================================================================
-
-Repository ini bersifat SANGAT PRIBADI (PRIVATE).
-
-DILARANG KERAS melakukan fork, clone, penggandaan, distribusi ulang, atau mempublikasikan ulang kode sumber maupun aset media di dalam repository ini tanpa izin tertulis dari pemilik sah.
-
-Jika Anda bermaksud untuk mempelajari struktur kode atau meminta izin akses, silakan hubungi pemilik resmi terlebih dahulu.
-
-📩 Kontak Perizinan:
-Telegram: @evxga_
-
-Discord: @evxga_# putriflix-journal
-# putriflix-journal
-# putriflix-journal
-# Putriflix-Journal
-# Putriflix-Journal
-# Putriflix-Journal
-# Putriflix-Journal
-# Putriflix-Journal
